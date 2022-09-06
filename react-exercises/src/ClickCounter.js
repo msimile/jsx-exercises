@@ -19,7 +19,7 @@ export class ClickCounter extends React.Component {
       <div>
         <h1>Click Counter: {this.state.count}</h1>
         {/* <button onClick={this.handleClickCounter}>Increment</button> */}
-        <CounterButton handle={this.handleClickCounter} />
+        <CounterButton counter={this.handleClickCounter} />
       </div>
     );
   }
