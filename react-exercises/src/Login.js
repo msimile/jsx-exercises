@@ -26,6 +26,14 @@ export class Login extends React.Component {
     });
   };
 
+  handleReset = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -55,7 +63,8 @@ export class Login extends React.Component {
           id="remember"
           type="checkbox"
           name="remember"
-          value={this.state.remember}
+          checked={this.state.remember}
+        //   value={this.state.remember}
           onChange={this.handleLoginInput}
         />
         <br />
@@ -74,6 +83,11 @@ export class Login extends React.Component {
             Login
           </button>
         )}
+        <br />
+        <br />
+        <button type="button" name="reset" onClick={this.handleReset}>
+          Reset Form
+        </button>
       </div>
     );
   }
