@@ -35,6 +35,10 @@ export class Login extends React.Component {
   };
 
   render() {
+    const buttonBackgroundColor = {
+      backgroundColor: this.state.password.length < 8 ? "red" : "green",
+      color: "white",
+    };
     return (
       <div>
         <h1>My Login Form</h1>
@@ -64,7 +68,7 @@ export class Login extends React.Component {
           type="checkbox"
           name="remember"
           checked={this.state.remember}
-        //   value={this.state.remember}
+          //   value={this.state.remember}
           onChange={this.handleLoginInput}
         />
         <br />
@@ -75,6 +79,7 @@ export class Login extends React.Component {
             name="login"
             value={this.state.login}
             onClick={this.onLogin}
+            style={buttonBackgroundColor}
           >
             Login
           </button>
