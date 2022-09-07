@@ -26,6 +26,12 @@ export class TodoList extends React.Component {
     }));
   };
 
+  handleResetButton = () => {
+    this.setState({
+      todos: [],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -40,7 +46,10 @@ export class TodoList extends React.Component {
           value={this.state.newTodo}
           onChange={this.handleNewTodo}
         ></input>
-        <button onClick={this.addTodo}>Add To The List</button>
+        <button onClick={this.addTodo}>Add to the list</button>
+        <br />
+        <br />
+        <button onClick={this.handleResetButton}>Clear the list</button>
       </div>
     );
   }
