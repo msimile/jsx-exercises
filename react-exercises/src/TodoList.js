@@ -22,6 +22,7 @@ export class TodoList extends React.Component {
   addTodo = () => {
     this.setState((state) => ({
       todos: [...this.state.todos, state.newTodo],
+      newTodo: "",
     }));
   };
 
