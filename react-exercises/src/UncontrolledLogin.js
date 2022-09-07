@@ -8,6 +8,12 @@ export class UncontrolledLogin extends React.Component {
     const username = event.target.elements.username.value;
     const password = event.target.elements.password.value;
     const remember = event.target.elements.remember.checked;
+
+    console.log({ username, password, remember });
+
+    username && password
+      ? (event.target.elements.login.disabled = false)
+      : (event.target.elements.login.disabled = true);
   };
 
   render() {
@@ -15,11 +21,11 @@ export class UncontrolledLogin extends React.Component {
       <div>
         <h1>My Uncontrolled Login Form</h1>
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-          <label for="userName">Username </label>
+          <label for="username">Username </label>
           <input name="username" type="text" />
           <br />
           <br />
-          <label for="passWord">Password </label>
+          <label for="password">Password </label>
           <input name="password" type="password" />
           <br />
           <br />
@@ -27,12 +33,14 @@ export class UncontrolledLogin extends React.Component {
           <input name="remember" type="checkbox" />
           <br />
           <br />
-          <button name="button" type="submit">
+          <button name="login" type="submit" disabled>
             Login
           </button>
           <br />
           <br />
-          <button name="reset" type="reset">Reset Form</button>
+          <button name="reset" type="reset">
+            Reset Form
+          </button>
         </form>
       </div>
     );
