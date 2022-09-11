@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .welcome {
   background-color: cyan;
   border: 3px solid darkblue;

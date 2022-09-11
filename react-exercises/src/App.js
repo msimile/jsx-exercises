@@ -8,20 +8,27 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello />
-        <Welcome name="John" />
-        <Counter initialValue={5} incrementAmount={5} incrementInterval={500} />
-        <ClickCounter />
-        <ClickTracker />
-        <InteractiveWelcome/>
-        <Login/>
-        <UncontrolledLogin/>
-        <TodoList/>
+        <Container>
+          <Hello />
+          <Welcome name="John" />
+          <Counter
+            initialValue={5}
+            incrementAmount={5}
+            incrementInterval={500}
+          />
+          <ClickCounter />
+          <ClickTracker />
+          <InteractiveWelcome />
+          <Login />
+          <UncontrolledLogin />
+          <TodoList />
+        </Container>
       </div>
     );
   }
