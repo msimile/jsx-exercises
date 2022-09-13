@@ -9,12 +9,22 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component {
   render() {
     return (
       <div>
-        <Container title="Container">
+        <DisplayLanguage />
+        <hr></hr>
+        <Container
+          title={
+            <h1 className="title">
+              <b>My Awesome React App</b>
+            </h1>
+          }
+        >
+          <hr></hr>
           <Hello />
           <Welcome name="John" />
           <Counter
