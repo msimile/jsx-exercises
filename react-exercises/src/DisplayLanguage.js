@@ -3,10 +3,10 @@ import { LanguageContext } from "./LanguageContext";
 
 const lang = {
     en: {
-        CURRENT_LANG: "Hello World!"
+        CURRENT_LANG: "Current language is english"
     },
     it: {
-        CURRENT_LANG: "Ciao Mondo!"
+        CURRENT_LANG: "La lingua selezionata è l'italiano"
     }
 }
 
@@ -16,7 +16,7 @@ export class DisplayLanguage extends React.Component {
         <div>
             <LanguageContext.Consumer>
                 {(language) => {
-                    return <h3>{lang[language].CURRENT_LANG}</h3>
+                    return <h2>{lang[language].CURRENT_LANG}</h2> // ho messo h2 invece di h1 perché era meno fastidioso esteticamente
                 }}
             </LanguageContext.Consumer>
         </div>
