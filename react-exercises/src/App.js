@@ -11,6 +11,7 @@ import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
+import { Sum } from "./Sum";
 
 export class App extends React.Component {
   state = {
@@ -45,7 +46,8 @@ export class App extends React.Component {
             <hr></hr>
             <Hello />
             <Welcome name="John" />
-            <Counter
+            <Sum numbers={[12, 14, 23, 27]}/>
+            {/* <Counter
               initialValue={5}
               incrementAmount={5}
               incrementInterval={500}
@@ -64,7 +66,7 @@ export class App extends React.Component {
                   </li>
                 ))
               }
-            />
+            /> */}
           </Container>
         </LanguageContext.Provider>
       </div>
