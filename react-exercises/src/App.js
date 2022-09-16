@@ -26,7 +26,7 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <LanguageContext.Provider value={this.state.language}>
+        {/* <LanguageContext.Provider value={this.state.language}>
           <select
             value={this.state.language}
             onChange={this.handleLanguageChange}
@@ -34,22 +34,22 @@ export class App extends React.Component {
             <option value="en">ENGLISH</option>
             <option value="it">ITALIANO</option>
           </select>
-          <DisplayLanguage />
+        <DisplayLanguage />
+        <hr></hr> */}
+        <Container
+          title={
+            <h1 className="title">
+              <b>My Awesome React App</b>
+            </h1>
+          }
+        >
           <hr></hr>
-          <Container
-            title={
-              <h1 className="title">
-                <b>My Awesome React App</b>
-              </h1>
-            }
-          >
-            <hr></hr>
-            <Hello />
-            <Welcome name="John" />
-            <Sum numbers={[12, 14, 23, 27]} />
-            <ClickCounter />
-            <Login />
-            {/* <Counter
+          <Hello />
+          <Welcome name="John" />
+          <Sum numbers={[12, 14, 23, 27]} />
+          <ClickCounter />
+          <Login />
+          {/* <Counter
               initialValue={5}
               incrementAmount={5}
               incrementInterval={500}
@@ -67,8 +67,8 @@ export class App extends React.Component {
                 ))
               }
             /> */}
-          </Container>
-        </LanguageContext.Provider>
+        </Container>
+        {/* </LanguageContext.Provider> */}
       </div>
     );
   }

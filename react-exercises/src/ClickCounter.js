@@ -1,12 +1,18 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 // import { CounterButton } from "./CounterButton";
 
-export function ClickCounter({initialValue = 0}) {
+export function ClickCounter({ initialValue = 0 }) {
   const [counter, setCounter] = useState(initialValue);
 
   function handleClickCounter() {
     setCounter((c) => c + 1);
   }
+
+  function onCounterChange() {
+    console.log(`Current value is ${counter}`);
+  }
+
+  useEffect(onCounterChange, [counter]);
 
   return (
     <div>
