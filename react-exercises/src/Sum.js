@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Sum({ numbers }) {
+export function Sum({ numbers = [10, 20, 30, 40] }) {
   const initialValue = 0;
   return (
     <h1>

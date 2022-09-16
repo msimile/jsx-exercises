@@ -27,15 +27,15 @@ export class App extends React.Component {
     return (
       <div>
         <LanguageContext.Provider value={this.state.language}>
-        <select
-          value={this.state.language}
-          onChange={this.handleLanguageChange}
-        >
-          <option value="en">ENGLISH</option>
-          <option value="it">ITALIANO</option>
-        </select>
-        <DisplayLanguage/>
-        <hr></hr>
+          <select
+            value={this.state.language}
+            onChange={this.handleLanguageChange}
+          >
+            <option value="en">ENGLISH</option>
+            <option value="it">ITALIANO</option>
+          </select>
+          <DisplayLanguage />
+          <hr></hr>
           <Container
             title={
               <h1 className="title">
@@ -46,7 +46,8 @@ export class App extends React.Component {
             <hr></hr>
             <Hello />
             <Welcome name="John" />
-            <Sum numbers={[12, 14, 23, 27]}/>
+            <Sum />
+            <Login />
             {/* <Counter
               initialValue={5}
               incrementAmount={5}
@@ -55,7 +56,6 @@ export class App extends React.Component {
             <ClickCounter />
             <ClickTracker />
             <InteractiveWelcome />
-            <Login />
             <UncontrolledLogin />
             <TodoList
               render={(state, remove) =>
