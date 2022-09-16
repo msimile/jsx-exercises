@@ -13,6 +13,4 @@ export function Sum({ numbers = [10, 20, 30, 40] }) {
   );
 }
 
-// Sum.DefaultProps = {
-//      numbers: [10, 20, 30, 40]
-// }
+
