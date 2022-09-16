@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
@@ -13,20 +13,19 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { Sum } from "./Sum";
 
-export class App extends React.Component {
-  state = {
-    language: "en",
-  };
+export function App() {
+  const [showCounter, setShowCounter] = useState(true);
+  // state = {
+  //   language: "en",
+  // };
 
-  handleLanguageChange = (event) => {
-    this.setState({
-      language: event.target.value,
-    });
-  };
-  render() {
-    return (
-      <div>
-        {/* <LanguageContext.Provider value={this.state.language}>
+  function handleToggleCounter() {
+    setShowCounter((s) => !s);
+  }
+
+  return (
+    <div>
+      {/* <LanguageContext.Provider value={this.state.language}>
           <select
             value={this.state.language}
             onChange={this.handleLanguageChange}
@@ -36,20 +35,23 @@ export class App extends React.Component {
           </select>
         <DisplayLanguage />
         <hr></hr> */}
-        <Container
-          title={
-            <h1 className="title">
-              <b>My Awesome React App</b>
-            </h1>
-          }
-        >
-          <hr></hr>
-          <Hello />
-          <Welcome name="John" />
-          <Sum numbers={[12, 14, 23, 27]} />
-          <ClickCounter />
-          <Login />
-          {/* <Counter
+      <Container
+        title={
+          <h1 className="title">
+            <b>My Awesome React App</b>
+          </h1>
+        }
+      >
+        <hr></hr>
+        <Hello />
+        <Welcome name="John" />
+        <Sum numbers={[12, 14, 23, 27]} />
+        <ClickCounter />
+        <Login />
+        <br />
+        {showCounter && <Counter />}
+        <button onClick={handleToggleCounter}>Toggle Counter</button>
+        {/* <Counter
               initialValue={5}
               incrementAmount={5}
               incrementInterval={500}
@@ -67,9 +69,8 @@ export class App extends React.Component {
                 ))
               }
             /> */}
-        </Container>
-        {/* </LanguageContext.Provider> */}
-      </div>
-    );
-  }
+      </Container>
+      {/* </LanguageContext.Provider> */}
+    </div>
+  );
 }
