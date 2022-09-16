@@ -12,6 +12,7 @@ import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 import { Sum } from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -45,6 +46,7 @@ export function App() {
         <hr></hr>
         <Hello />
         <Welcome name="John" />
+        <GithubUser username="msimile" />
         <Sum numbers={[12, 14, 23, 27]} />
         <ClickCounter />
         <Login />
