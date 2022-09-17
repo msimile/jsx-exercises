@@ -48,7 +48,7 @@ export function App() {
         <Hello />
         <Welcome name="John" />
         {/* <GithubUser username="msimile" /> */}
-        <GithubUserList/>
+        <GithubUserList />
         <Sum numbers={[12, 14, 23, 27]} />
         <ClickCounter />
         <Login />
