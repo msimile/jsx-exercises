@@ -1,12 +1,14 @@
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({ username }) {
-  const { data } = useGithubUser(username);
+  const { data, loading, error } = useGithubUser(username);
 
   return (
     <div>
       {data && (
         <div>
+          {loading && <h1>Loading...</h1>}
+          {error && <h1>Warning! An error occurred!</h1>}
           <h1>{data.name}</h1>
           <h3>{data.bio}</h3>
           <p>
