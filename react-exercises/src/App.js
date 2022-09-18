@@ -14,6 +14,7 @@ import { LanguageContext } from "./LanguageContext";
 import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
+import { ControlledForm } from "./ControlledForm";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -51,7 +52,10 @@ export function App() {
         <GithubUserList />
         <Sum numbers={[12, 14, 23, 27]} />
         <ClickCounter />
-        <Login />
+        <br></br>
+        <ControlledForm />
+        <br></br>
+        {/* <Login /> */}
         <br />
         {showCounter && <Counter />}
         <button onClick={handleToggleCounter}>Toggle Counter</button>

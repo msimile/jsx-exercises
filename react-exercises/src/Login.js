@@ -84,6 +84,10 @@ export function Login() {
   );
 }
 
+// -----------------------------------------------------------------
+
+// LOGIN CLASS COMPONENT //
+
 // export class Login extends React.Component {
 //   state = {
 //     username: "",
