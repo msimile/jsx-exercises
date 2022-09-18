@@ -15,6 +15,7 @@ import { Sum } from "./Sum";
 import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { ControlledForm } from "./ControlledForm";
+import { CarDetails } from "./CarDetails";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -50,7 +51,8 @@ export function App() {
         <Welcome name="John" />
         <GithubUser username="msimile" />
         <GithubUserList />
-        <Sum numbers={[12, 14, 23, 27]} />
+        <CarDetails />
+        {/* <Sum numbers={[12, 14, 23, 27]} /> */}
         <ClickCounter />
         <br></br>
         <ControlledForm />
