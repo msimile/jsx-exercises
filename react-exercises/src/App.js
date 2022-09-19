@@ -16,6 +16,7 @@ import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { ControlledForm } from "./ControlledForm";
 import { CarDetails } from "./CarDetails";
+import { FilteredList } from "./FilteredList";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
@@ -47,6 +48,7 @@ export function App() {
         >
           <hr></hr>
           <Hello />
+          <FilteredList />
           <Welcome name="John" />
           <GithubUser username="msimile" />
           <GithubUserList />
