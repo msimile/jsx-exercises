@@ -19,49 +19,48 @@ import { CarDetails } from "./CarDetails";
 
 export function App() {
   const [showCounter, setShowCounter] = useState(true);
-  // state = {
-  //   language: "en",
-  // };
+  const [lang, setLang] = useState("en");
 
   function handleToggleCounter() {
     setShowCounter((s) => !s);
   }
 
+  function handleLanguageChange(event) {
+    setLang(event.target.value);
+  }
+
   return (
     <div>
-      {/* <LanguageContext.Provider value={this.state.language}>
-          <select
-            value={this.state.language}
-            onChange={this.handleLanguageChange}
-          >
-            <option value="en">ENGLISH</option>
-            <option value="it">ITALIANO</option>
-          </select>
+      <LanguageContext.Provider value={lang}>
+        <select value={lang} onChange={handleLanguageChange}>
+          <option value="en">ENGLISH</option>
+          <option value="it">ITALIANO</option>
+        </select>
         <DisplayLanguage />
-        <hr></hr> */}
-      <Container
-        title={
-          <h1 className="title">
-            <b>My Awesome React App</b>
-          </h1>
-        }
-      >
         <hr></hr>
-        <Hello />
-        <Welcome name="John" />
-        <GithubUser username="msimile" />
-        <GithubUserList />
-        <CarDetails />
-        {/* <Sum numbers={[12, 14, 23, 27]} /> */}
-        <ClickCounter />
-        <br></br>
-        <ControlledForm />
-        <br></br>
-        {/* <Login /> */}
-        <br />
-        {showCounter && <Counter />}
-        <button onClick={handleToggleCounter}>Toggle Counter</button>
-        {/* <Counter
+        <Container
+          title={
+            <h1 className="title">
+              <b>My Awesome React App</b>
+            </h1>
+          }
+        >
+          <hr></hr>
+          <Hello />
+          <Welcome name="John" />
+          <GithubUser username="msimile" />
+          <GithubUserList />
+          <CarDetails />
+          {/* <Sum numbers={[12, 14, 23, 27]} /> */}
+          <ClickCounter />
+          <br></br>
+          <ControlledForm />
+          <br></br>
+          {/* <Login /> */}
+          <br />
+          {showCounter && <Counter />}
+          <button onClick={handleToggleCounter}>Toggle Counter</button>
+          {/* <Counter
               initialValue={5}
               incrementAmount={5}
               incrementInterval={500}
@@ -79,8 +78,8 @@ export function App() {
                 ))
               }
             /> */}
-      </Container>
-      {/* </LanguageContext.Provider> */}
+        </Container>
+      </LanguageContext.Provider>
     </div>
   );
 }
