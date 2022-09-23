@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities; */
 
-.welcome {
-  background-color: cyan;
-  border: 3px solid darkblue;
-  width: 30%;
-  padding: 10px;
-  margin: 10px 0;
+.container {
+  background-color: beige;
+  border: 3px solid maroon;
+  padding: 15px;
 }
 
 .title {

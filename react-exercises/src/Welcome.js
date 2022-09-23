@@ -1,10 +1,10 @@
 import React from "react";
 import { Age } from "./Age";
 
-export function Welcome({ name = "visitor" }) {
+export function Welcome({ name = "World" }) {
   return (
     <div>
-      <p>Welcome, {name}!</p>
+      <h1>Welcome, {name}!</h1>
       {name === "John" && <Age age={18} />}
     </div>
   );
