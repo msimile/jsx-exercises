@@ -8,7 +8,7 @@ export function ClickCounter({ initialValue = 0 }) {
 
   return (
     <div>
-      <h2>Counter: {counter}</h2>
+      <h1>Counter: {counter}</h1>
       <button onClick={onIncrement}>Increment</button>
       <button onClick={onDecrement}>Decrement</button>
       <button onClick={onReset}>Reset</button>
