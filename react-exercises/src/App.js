@@ -17,6 +17,7 @@ import { GithubUserList } from "./GithubUserList";
 import { ControlledForm } from "./ControlledForm";
 import { CarDetails } from "./CarDetails";
 import { Route, Routes } from "react-router-dom";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
   // const [showCounter, setShowCounter] = useState(true);
@@ -35,6 +36,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Welcome name="Marco" />} />
         <Route path="/counter" element={<ClickCounter />} />
+        <Route path="users/:username" element={<ShowGithubUser />} />
       </Routes>
     </Container>
   );
