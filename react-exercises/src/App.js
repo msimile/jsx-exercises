@@ -37,7 +37,17 @@ export function App() {
         <div>
           <h1>Develhope React App</h1>
           <div>
-            <Link to="/"><b>Home</b></Link> | <Link to="/counter"><b>Counter</b></Link> | <Link to="/users/msimile"><b>Github Account</b></Link>
+            <Link to="/">
+              <b>Home</b>
+            </Link>{" "}
+            |{" "}
+            <Link to="/counter">
+              <b>Counter</b>
+            </Link>{" "}
+            |{" "}
+            <Link to="/users/msimile">
+              <b>Github Account</b>
+            </Link>
           </div>
         </div>
       }
@@ -46,6 +56,15 @@ export function App() {
         <Route path="/" element={<Welcome name="Marco" />} />
         <Route path="/counter" element={<ClickCounter />} />
         <Route path="users/:username" element={<ShowGithubUser />} />
+        <Route
+          path="*"
+          element={
+            <div>
+              <h1>Not Found</h1>
+              <Link to="/">Go Home</Link>
+            </div>
+          }
+        />
       </Routes>
     </Container>
   );
