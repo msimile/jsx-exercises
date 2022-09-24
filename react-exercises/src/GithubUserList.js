@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { GithubUser } from "./GithubUser";
 
 export function GithubUserList() {
@@ -31,6 +31,7 @@ export function GithubUserList() {
         placeholder="Type a Github username..."
       />
       <button onClick={handleAddUsername}>Add to the list</button>
+      <Outlet />
     </div>
   );
 }
