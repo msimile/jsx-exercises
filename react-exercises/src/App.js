@@ -45,7 +45,7 @@ export function App() {
               <b>Counter</b>
             </Link>{" "}
             |{" "}
-            <Link to="/users/msimile">
+            <Link to="/users">
               <b>Github Account</b>
             </Link>
           </div>
@@ -56,6 +56,7 @@ export function App() {
         <Route path="/" element={<Welcome name="Marco" />} />
         <Route path="/counter" element={<ClickCounter />} />
         <Route path="users/:username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<GithubUserList/>}/>
         <Route
           path="*"
           element={
