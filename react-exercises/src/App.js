@@ -16,7 +16,7 @@ import { GithubUser } from "./GithubUser";
 import { GithubUserList } from "./GithubUserList";
 import { ControlledForm } from "./ControlledForm";
 import { CarDetails } from "./CarDetails";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
@@ -32,7 +32,16 @@ export function App() {
   // }
 
   return (
-    <Container>
+    <Container
+      title={
+        <div>
+          <h1>Develhope React App</h1>
+          <div>
+            <Link to="/"><b>Home</b></Link> | <Link to="/counter"><b>Counter</b></Link> | <Link to="/users/msimile"><b>Github Account</b></Link>
+          </div>
+        </div>
+      }
+    >
       <Routes>
         <Route path="/" element={<Welcome name="Marco" />} />
         <Route path="/counter" element={<ClickCounter />} />
