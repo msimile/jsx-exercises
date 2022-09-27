@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GithubUser } from "./GithubUser";
 
 export function GithubUserList() {
-  const [user, setUser] = useState({ userList: [] });
+  const [user, setUser] = useState({ userList: [], newUser: null });
   const [input, setInput] = useState("");
 
   function handleInput(event) {
@@ -13,9 +13,16 @@ export function GithubUserList() {
     setUser({ userList: [...user.userList, input] });
   }
 
+  useEffect(() => {
+    setUser((prevData) => ({
+      ...prevData,
+      userList: [...prevData.userList, prevData.newUser],
+    }));
+  }, [user.newUser]);
+
   return (
     <div>
-        <h1>Github User List</h1>
+      <h1>Github User List</h1>
       <ul>
         {user &&
           user.userList.map((item, index) => (
